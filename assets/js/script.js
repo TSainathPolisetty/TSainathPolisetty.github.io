@@ -1,7 +1,5 @@
 'use strict';
 
-
-
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
@@ -112,6 +110,14 @@ for (let i = 0; i < filterBtn.length; i++) {
   });
 
 }
+
+document.querySelectorAll('.details-toggle').forEach(button => {
+  button.addEventListener('click', () => {
+    const details = button.nextElementSibling;
+    details.style.display = details.style.display === 'block' ? 'none' : 'block';
+    button.textContent = details.style.display === 'block' ? 'Less' : 'More';
+  });
+});
 
 
 

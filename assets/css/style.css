@@ -1878,6 +1878,113 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 * RESUME
 	 */
 
-  .timeline-text { max-width: 700px; }
+  .timeline-text {
+    max-width: 700px;
+    list-style: none; /* Removes default bullets */
+    padding-left: 0; /* Adjusts padding */
+  }
+
+  .timeline-text li {
+      position: relative;
+      padding-left: 20px; /* Space for custom bullet */
+      margin-bottom: 10px; /* Space between items */
+      line-height: 1.6; /* Adjust line spacing */
+  }
+
+  .timeline-text li:before {
+      content: '•'; /* Custom bullet symbol */
+      position: absolute;
+      left: 0;
+      color: #007bff; /* Color of the bullet */
+      font-size: 20px; /* Size of the bullet */
+      line-height: 1; /* Align bullet with text */
+  }
+
+  /* Style for the 'More' button */
+  .details-toggle {
+    cursor: pointer;
+    color: rgb(184, 184, 86);
+    /* cursor: pointer;
+    background-color: yellow; 
+    color: black; 
+    border: none;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px; */
+  }
+
+  .brief-description {
+    color: white; /* White color for the paragraph text */
+    clear: both; /* This property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them */
+    display: block; /* This ensures that the paragraph is a block-level element and will respect the clear property */
+
+  }
+
+  /* Style for the paragraph within the timeline details */
+  .timeline-details p {
+    color: white; /* White color for the paragraph text */
+    /* Add more styling as needed */
+  }
+
+  /* Initially hide the details */
+  .timeline-details {
+    display: none;
+  }
+
+  .loc {
+    float: left;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  .dat {
+    float: right;
+    margin-left: 10px; /* Adjust as needed */
+  }
+
+  .skills-section {
+    color: white; /* Sets text color to white for the entire section */
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 columns */
+    gap: 20px; /* Adjust the space between categories */
+    margin-top: 20px; /* Adjust spacing as needed */
+  }
+  
+  .skills-category {
+    /* Removed the background color */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 8px; /* Optional: for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for shadow */
+    /* Add more styling for the categories */
+  }
+  
+   
+  .skill {
+    margin-bottom: 10px; /* Space between skill name and skill level dots */
+  }
+  
+  .skill-name {
+    display: block; /* Makes the skill name take up the full width */
+  }
+  
+  .skill-level {
+    display: flex;
+    margin-top: 4px; /* Space above the dots */
+  }
+  
+  .dot {
+    height: 10px;
+    width: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  
+  .dot.filled {
+    background-color: #ffc107; /* Your chosen color for filled dots */
+  }
+  
 
 }
