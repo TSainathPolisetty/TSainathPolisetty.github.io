@@ -77,14 +77,17 @@ for (let i = 0; i < selectItems.length; i++) {
 const filterItems = document.querySelectorAll("[data-filter-item]");
 
 const filterFunc = function (selectedValue) {
+  console.log("filterFunc called with:", selectedValue);
 
   for (let i = 0; i < filterItems.length; i++) {
-
     if (selectedValue === "all") {
       filterItems[i].classList.add("active");
+      console.log("selectedValue:", selectedValue);
     } else if (selectedValue === filterItems[i].dataset.category) {
+      console.log("selectedValue:", selectedValue);
       filterItems[i].classList.add("active");
     } else {
+      console.log("selectedValue:", selectedValue);
       filterItems[i].classList.remove("active");
     }
 
@@ -163,3 +166,38 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// Newly Added
+const serviceItems = document.querySelectorAll(".service-item-title");
+serviceItems.forEach(item => {
+  item.addEventListener("click", function () {
+    const serviceCategory = this.getAttribute("data-service");
+    filterPortfolio(serviceCategory);
+  });
+});
+
+function filterPortfolio(category) {
+  console.log("Filtering portfolio for category:", category);
+  const filterBtns = document.querySelectorAll("[data-filter-btn]");
+  filterBtns.forEach(btn => {
+    if (btn.innerText.toLowerCase() === category.toLowerCase()) {
+      btn.click(); // Trigger the filter
+    }
+  });
+
+  // Switch to the portfolio page
+  changeActivePageTo('portfolio');
+}
+
+
+function changeActivePageTo(pageName) {
+  navigationLinks.forEach(link => {
+    if (link.innerText.toLowerCase() === pageName) {
+      link.click();
+    }
+  });
+
+  // Optionally scroll to the portfolio section
+  document.querySelector('[data-page="' + pageName + '"]').scrollIntoView({ behavior: 'smooth' });
+}
+
