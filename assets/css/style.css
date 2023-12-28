@@ -170,7 +170,7 @@ article {
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
   border-radius: 35px;
-  padding: 8px;
+  padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
   width: 90%;
@@ -180,15 +180,15 @@ article {
   width: 100%;
   height: 1px;
   background: var(--jet);
-  margin: 19px 0;
+  margin: 16px 0;
 }
 
 .icon-box {
   position: relative;
   background: var(--border-gradient-onyx);
-  width: 40px;
+  width: 30px;
   height: 30px;
-  border-radius: 9px;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -561,7 +561,7 @@ main {
  * #testimonials 
  */
 
-.testimonials { margin-bottom: 30px; }
+/* .testimonials { margin-bottom: 30px; }
 
 .testimonials-title { margin-bottom: 20px; }
 
@@ -606,7 +606,7 @@ main {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
-}
+} */
 
 
 /**
@@ -721,41 +721,6 @@ main {
   font-weight: var(--fw-300);
   line-height: 1.6;
 }
-
-
-/**
- * #clients 
- */
-
-.clients { margin-bottom: 15px; }
-
-.clients-list {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
-  margin: 0 -15px;
-  padding: 25px;
-  padding-bottom: 25px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: 25px;
-}
-
-.clients-item {
-  min-width: 50%;
-  scroll-snap-align: start;
-}
-
-.clients-item img {
-  width: 100%;
-  filter: grayscale(1);
-  transition: var(--transition-1);
-}
-
-.clients-item img:hover { filter: grayscale(0); }
 
 
 
@@ -1234,14 +1199,7 @@ textarea.form-input::-webkit-resizer { display: none; }
  * responsive larger than 450px screen
  */
 
-@media (min-width: 450px) {
-
-  /**
-   * client
-   */
-
-  .clients-item { min-width: calc(33.33% - 10px); }
-
+ @media (min-width: 450px) {
 
 
   /**
@@ -1471,19 +1429,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     flex-grow: 1;
     width: 35px;
   }
-
-  /* clients */
-
-  .clients-list {
-    gap: 50px;
-    margin: 0 -30px;
-    padding: 45px;
-    scroll-padding-inline: 45px;
-  }
-
-  .clients-item { min-width: calc(33.33% - 35px); }
-
-
 
   /**
    * #RESUME
@@ -1740,11 +1685,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  /* clients */
-
-  .clients-item { min-width: calc(25% - 38px); }
-
-
+ 
 
   /**
    * PORTFOLIO
@@ -1883,12 +1824,79 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 * RESUME
 	 */
 
+   .article-title {
+    margin-bottom: 30px;
+    color: var(--white-1); /* Updated color */
+  }
+  
+  .timeline {
+    margin-bottom: 30px;
+  }
+  
+  .timeline .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .timeline-list {
+    font-size: var(--fs-6); /* Updated font size */
+    margin-left: 45px;
+  }
+  
+  .timeline-item {
+    position: relative;
+  }
+  
+  .timeline-item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  
+  .timeline-item-title {
+    font-size: var(--fs-6); /* Updated font size */
+    line-height: 1.3;
+    margin-bottom: 7px;
+    color: var(--white-1); /* Updated color */
+  }
+  
+  .timeline-list span {
+    color: var(--vegas-gold); /* Updated color */
+    font-weight: var(--fw-400); /* Updated font weight */
+    line-height: 1.6;
+  }
+  
+  .timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: -30px;
+    width: 1px;
+    height: calc(100% + 50px);
+    background: var(--jet); /* Updated color */
+  }
+  
+  .timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -33px;
+    height: 6px;
+    width: 6px;
+    background: var(--text-gradient-yellow); /* Updated gradient */
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--jet); /* Updated shadow */
+  }
+  
   .timeline-text {
+    color: var(--light-gray); /* Updated color */
+    font-weight: var(--fw-300); /* Updated font weight */
+    line-height: 1.6;
     max-width: 700px;
     list-style: none; /* Removes default bullets */
     padding-left: 0; /* Adjusts padding */
   }
-
+  
   .timeline-text li {
       position: relative;
       padding-left: 20px; /* Space for custom bullet */
@@ -1897,38 +1905,35 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .timeline-text li:before {
-      content: '•'; /* Custom bullet symbol */
-      position: absolute;
-      left: 0;
-      color: #007bff; /* Color of the bullet */
-      font-size: 20px; /* Size of the bullet */
-      line-height: 1; /* Align bullet with text */
+    content: '•'; /* Custom bullet symbol */
+    position: absolute;
+    left: 0;
+    color: var(--orange-yellow-crayola); /* Updated color using root variable */
+    font-size: 20px; /* Size of the bullet */
+    line-height: 1; /* Align bullet with text */
   }
 
   /* Style for the 'More' button */
-  .details-toggle {
-    cursor: pointer;
-    color: rgb(184, 184, 86);
-    /* cursor: pointer;
-    background-color: yellow; 
-    color: black; 
-    border: none;
-    padding: 5px 10px;
-    margin: 5px 0;
-    border-radius: 5px; */
-  }
+.details-toggle {
+  cursor: pointer;
+  color: var( --vegas-gold); /* Updated color using root variable */
+  /* Uncomment and update the styles if needed */
+  /* background-color: var(--onyx); 
+  border: none;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border-radius: 5px; */
+}
 
-  .brief-description {
-    color: white; /* White color for the paragraph text */
-    clear: both; /* This property specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them */
-    display: block; /* This ensures that the paragraph is a block-level element and will respect the clear property */
-
-  }
+.brief-description {
+  color: var(--white-1); /* Updated color using root variable */
+  clear: both;
+  display: block;
+}
 
   /* Style for the paragraph within the timeline details */
   .timeline-details p {
-    color: white; /* White color for the paragraph text */
-    /* Add more styling as needed */
+    color: var(--white-1); /* Updated color using root variable */  
   }
 
   /* Initially hide the details */
@@ -1957,11 +1962,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
   
   .skills-category {
-    /* Removed the background color */
-    padding: 20px; /* Adjust padding as needed */
-    border-radius: 8px; /* Optional: for rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: for shadow */
-    /* Add more styling for the categories */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-2); /* Updated shadow using root variable */    
   }
   
   .skill {
@@ -1980,15 +1983,43 @@ textarea.form-input::-webkit-resizer { display: none; }
   .dot {
     height: 10px;
     width: 10px;
-    background-color: #ddd;
+    background-color: var(--light-gray-70); /* Updated color using root variable */
     border-radius: 50%;
     display: inline-block;
     margin-right: 4px;
   }
   
   .dot.filled {
-    background-color: #ffc107; /* Your chosen color for filled dots */
+    background-color: var(--orange-yellow-crayola); /* Updated color using root variable */
   }
   
+
+  /* Skills Section - Mobile Responsiveness */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 10px; /* Reduced gap for mobile */
+  }
+
+  .skill-name {
+    font-size: var(--fs-6); /* Slightly larger font size for mobile */
+  }
+
+  .skill-level {
+    margin-top: 2px; /* Reduced margin for mobile */
+  }
+
+  .dot {
+    height: 8px; /* Smaller dots for mobile */
+    width: 8px; /* Smaller dots for mobile */
+  }
+
+  .skills-category {
+    padding: 15px; /* Reduced padding for mobile */
+  }
+}
+
+/* Other adjustments as needed */
+
 
 }
