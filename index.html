@@ -1220,7 +1220,7 @@
           </figure>
         </section>
 
-        <section class="contact-form">
+        <!-- <section class="contact-form">
 
           <h3 class="h3 form-title">Contact Form</h3>
 
@@ -1241,7 +1241,34 @@
 
           </form>
 
+        </section> -->
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+        
+          <!-- Start of the form with Formspree action URL -->
+          <form action="https://formspree.io/f/xjvnvvre" method="POST" class="form" data-form>
+        
+            <div class="input-wrapper">
+              <!-- Full name input -->
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+        
+              <!-- Email input -->
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+        
+            <!-- Message textarea -->
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+        
+            <!-- Submit button -->
+            <button class="form-btn" type="submit" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+        
+          </form>
         </section>
+        
 
       </article>
 
