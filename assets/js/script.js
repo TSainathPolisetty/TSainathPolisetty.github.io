@@ -201,3 +201,48 @@ function changeActivePageTo(pageName) {
   document.querySelector('[data-page="' + pageName + '"]').scrollIntoView({ behavior: 'smooth' });
 }
 
+document.querySelectorAll('.project-item').forEach(item => {
+  const img = item.querySelector('img');
+  const originalSrc = img.src;
+  const hoverSrc = img.getAttribute('data-hover-src');
+
+  item.addEventListener('mouseenter', () => {
+    img.src = hoverSrc;
+  });
+
+  item.addEventListener('mouseleave', () => {
+    img.src = originalSrc;
+  });
+});
+
+function showProjectModal(projectName, url) {
+  var modal = document.getElementById("projectConfirmationModal");
+  var modalText = document.getElementById("projectModalText");
+  var confirmBtn = document.getElementById("projectConfirmButton");
+  var closeBtn = document.getElementsByClassName("project-modal-close")[0];
+  var cancelBtn = document.getElementById("projectCancelButton");
+
+  modalText.textContent = "The current project (" + projectName + ") is still ongoing and does not have a completed git repo yet. Are you sure you want to continue?";
+  modal.style.display = "block";
+
+  closeBtn.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  cancelBtn.onclick = function() {
+      modal.style.display = "none";
+  }
+
+  confirmBtn.onclick = function() {
+      window.open(url, '_blank').focus();
+      modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+}
+
+

@@ -42,7 +42,7 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/prodp.jpeg" alt="TSP" width="80">
+          <img src="./assets/images/image.png" alt="TSP" width="80">
         </figure>
 
         <div class="info-content">
@@ -526,6 +526,16 @@
                       <span class="dot"></span>
                   </div>
               </div>
+              <div class="skill">
+                <span class="skill-name">MATLAB/Simulink</span>
+                <div class="skill-level">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
             </div>
 
             <div class="skills-category">
@@ -918,35 +928,44 @@
 
           </div>
 
+          <!-- Custom Project Confirmation Modal -->
+          <div id="projectConfirmationModal" class="project-confirmation-modal">
+            <div class="project-modal-content">
+                <span class="project-modal-close">&times;</span>
+                <p id="projectModalText">The Selected Project is still Ongoing and hence does not have a completed git repo yet, do you still wish to see it?</p>
+                <button id="projectConfirmButton">Yes</button>
+                <button id="projectCancelButton">No</button>
+            </div>
+          </div>
+
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="aiot">
-              <a href="#">
+              <a href="https://github.com/TSainathPolisetty/AI-Driven-Gesture-Controlled-Car.git" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="eye-outline"></ion-icon>                   
                   </div>
 
-                  <img src="./assets/images/carai.png" alt="AI-Driven Gesture-Controlled Car" loading="lazy">
+                  <img src="./assets/images/carai.png" alt="AI-Driven Gesture-Controlled Car" loading="lazy" data-hover-src="assets/images/carh.jpeg">
                 </figure>
 
                 <h3 class="project-title">AI-Driven Gesture-Controlled Car</h3>
 
                 <p class="project-category">AIOT</p>
-
-              </a>
+              </a>              
             </li>
 
             <li class="project-item  active" data-filter-item data-category="aiot">
-              <a href="#">
+              <a href="https://github.com/TSainathPolisetty/Activitytracker.git" target="blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/healthtr.png" alt="AI-Based Health and Fitness Tracker" loading="lazy">
+                  <img src="./assets/images/healthtr.png" alt="AI-Based Health and Fitness Tracker" loading="lazy" data-hover-src="assets/images/tracker.png">
                 </figure>
 
                 <h3 class="project-title">AI-Based Health and Fitness Tracker</h3>
@@ -964,7 +983,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/post.png" alt="Machine Learning for Posture Detection" loading="lazy">
+                  <img src="./assets/images/post.png" alt="Machine Learning for Posture Detection" loading="lazy" data-hover-src="assets/images/posture.png">
                 </figure>
 
                 <h3 class="project-title">Machine Learning for Posture Detection</h3>
@@ -975,14 +994,14 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="embedded ai and machine learning">
-              <a href="#">
+              <a href="https://github.com/TSainathPolisetty/envsound.git" target="blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/envsound.png" alt="Environmental Sound Detection with ML" loading="lazy">
+                  <img src="./assets/images/envsound.png" alt="Environmental Sound Detection with ML" loading="lazy" data-hover-src="assets/images/env_sound.png">
                 </figure>
 
                 <h3 class="project-title">Environmental Sound Detection with ML</h3>
@@ -1000,7 +1019,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/wake-word.png" alt="Voice Command Recognition with AI" loading="lazy">
+                  <img src="./assets/images/wake-word.png" alt="Voice Command Recognition with AI" loading="lazy" data-hover-src="assets/images/word.png">
                 </figure>
 
                 <h3 class="project-title">Voice Command Recognition with AI</h3>
@@ -1011,14 +1030,14 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="embedded ai and machine learning">
-              <a href="#">
+              <a href="https://github.com/TSainathPolisetty/ASR" target="blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/speech2tex.png" alt="Advanced Speech to Text Conversion with AI" loading="lazy">
+                  <img src="./assets/images/speech2tex.png" alt="Advanced Speech to Text Conversion with AI" loading="lazy" data-hover-src="assets/images/speech.png">
                 </figure>
 
                 <h3 class="project-title">Advanced Speech to Text Conversion with AI</h3>
@@ -1036,7 +1055,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/balance.png" alt="Self Balancing Bike" loading="lazy">
+                  <img src="./assets/images/balance.png" alt="Self Balancing Bike" loading="lazy" data-hover-src="assets/images/bike.jpeg">
                 </figure>
 
                 <h3 class="project-title">Self Balancing Bike</h3>
@@ -1054,7 +1073,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/pickplace.png" alt="Web-cam controlled Bot" loading="lazy">
+                  <img src="./assets/images/pickplace.png" alt="Web-cam controlled Bot" loading="lazy" data-hover-src="assets/images/webcam.png">
                 </figure>
 
                 <h3 class="project-title">Web-cam controlled Bot</h3>
@@ -1072,7 +1091,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/drawb.png" alt="Drawing Bot" loading="lazy">
+                  <img src="./assets/images/drawb.png" alt="Drawing Bot" loading="lazy" data-hover-src="assets/images/draw.png">
                 </figure>
 
                 <h3 class="project-title">Drawing Bot</h3>
@@ -1090,7 +1109,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/vacc.png" alt="Vaccuum Cleaning Bot" loading="lazy">
+                  <img src="./assets/images/vacc.png" alt="Vaccuum Cleaning Bot" loading="lazy" data-hover-src="assets/images/clean.jpeg">
                 </figure>
 
                 <h3 class="project-title">Vaccuum Cleaning Bot</h3>
@@ -1101,14 +1120,14 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="embedded ai and machine learning">
-              <a href="#">
+              <a href="#" onclick="showProjectModal('IMUNet: Regression Architecture for IMU Navigation and Positioning', 'https://github.com/TSainathPolisetty/imunetnav.git');">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/imu.png" alt="IMUNet: Regression Architecture for IMU Navigation and Positioning" loading="lazy">
+                  <img src="./assets/images/imu.png" alt="IMUNet: Regression Architecture for IMU Navigation and Positioning" loading="lazy" data-hover-src="assets/images/imunet.png">
                 </figure>
 
                 <h3 class="project-title">IMUNet: Regression Architecture for IMU Navigation and Positioning</h3>
@@ -1119,14 +1138,14 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="aiot">
-              <a href="#">
+              <a href="#" onclick="showProjectModal('Pest Control Using CNNs and ESP32', 'https://github.com/TSainathPolisetty/pestesp32.git');">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/pest.png" alt="Pest Control Using CNNs and ESP32" loading="lazy">
+                  <img src="./assets/images/pest.png" alt="Pest Control Using CNNs and ESP32" loading="lazy" data-hover-src="assets/images/pestc.png">
                 </figure>
 
                 <h3 class="project-title">Pest Control Using CNNs and ESP32</h3>

@@ -68,6 +68,10 @@
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --soft-red: hsl(10, 74%, 50%);
+  --soft-green: hsl(144, 74%, 50%);
+
+
 
   /**
    * typography
@@ -940,6 +944,81 @@ main {
   font-size: var(--fs-6);
   font-weight: var(--fw-300);
 }
+
+
+/* The Project Confirmation Modal (background) */
+.project-confirmation-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: var(--bg-gradient-jet); /* Black with opacity for outside modal */
+}
+
+/* Project Modal Content */
+.project-modal-content {
+  background-color: hsl(240, 2%, 20%); /* Dark greyish blue background */
+  color: var(--white-1); /* White text color */
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 2px solid var(--orange-yellow-crayola); /* Yellow border */
+  border-radius: 10px; /* Rounded corners */
+  width: 50%; /* Adjust width as needed */
+  box-shadow: 0 4px 8px 0 var(--jet); /* Optional: adds a shadow effect */
+}
+
+/* The Close Button for Project Modal */
+.project-modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.project-modal-close:hover,
+.project-modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styles for the Yes and No buttons */
+#projectConfirmButton, #projectCancelButton {
+  padding: 10px 20px; /* Button padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for buttons */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor changes to pointer on hover */
+  margin-right: 10px; /* Margin to the right of the button */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+/* Style for the Yes button */
+#projectConfirmButton {
+  background-color: var (--light-gray-70); /* Green background */
+  color: var(--white-1); /* White text */
+}
+
+/* Style for the No button */
+#projectCancelButton {
+  background-color: var (--light-gray-70); /* Red background */
+  color: var(--white-1); /* White text */
+}
+
+/* Hover effects for buttons */
+#projectConfirmButton:hover {
+  background-color: var(--soft-green); /* Darker green on hover */
+  color: var(--white-2);
+}
+
+#projectCancelButton:hover {
+  background-color: var(--soft-red); /* Darker red on hover */
+}
+
 
 
 
