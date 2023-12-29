@@ -1875,10 +1875,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 .brief-description {
-  color: var(--white-1); /* Updated color using root variable */
+  background: -webkit-linear-gradient(45deg, var(--white-1), var(--white-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* Other styles for .brief-description */
   clear: both;
   display: block;
+  /* ... */
 }
+
 
   /* Style for the paragraph within the timeline details */
   .timeline-details p {
@@ -1932,16 +1937,25 @@ textarea.form-input::-webkit-resizer { display: none; }
   .dot {
     height: 10px;
     width: 10px;
-    background-color: var(--light-gray-70); /* Updated color using root variable */
+    background-color: var(--light-gray-70); /* Light gray color for unfilled dots */
     border-radius: 50%;
     display: inline-block;
     margin-right: 4px;
   }
-  
+    
   .dot.filled {
-    background-color: var(--orange-yellow-crayola); /* Updated color using root variable */
+      background-color: var(--orange-yellow-crayola); /* Orange-yellow color for filled dots */
   }
-  
+    
+  .dot.half-filled {
+    background: linear-gradient(to right, var(--orange-yellow-crayola) 50%, var(--light-gray-70) 50%);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
 
   /* Skills Section - Mobile Responsiveness */
 @media (max-width: 480px) {
