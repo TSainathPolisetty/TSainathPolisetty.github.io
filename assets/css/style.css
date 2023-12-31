@@ -2033,60 +2033,36 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 10px;
     display: inline-block;
     margin-right: 4px;
-}
+  }
 
+  /* Header Content Style */
 .header-content {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* Align items to the start */
-  padding-top: 10px; /* Adds some space at the top */
+  justify-content: start;
 }
 
 .h2.article-title {
-  margin: 0; /* Reset margin */
-  margin-right: 20px; /* Adds space to the right of the title */
+  margin-right: 20px; /* Increase right margin for more space */
 }
 
+/* Download Resume Button */
 .download-resume-btn {
-  position: relative;
-  width: auto; /* Adjusted to fit content */
-  background: var(--border-gradient-onyx);
+  background: transparent;
   color: var(--orange-yellow-crayola);
+  border: none;
+  cursor: pointer;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 13px 20px;
-  border-radius: 14px;
-  font-size: var(--fs-6);
-  text-transform: capitalize;
-  box-shadow: var(--shadow-3);
-  z-index: 1;
-  transition: var(--transition-1);
+  justify-content: center;
+  padding: 5px;
+  margin-left: none; /* Pushes the button to the right */
 }
 
-.download-resume-btn::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--bg-gradient-jet);
-  border-radius: inherit;
-  z-index: -1;
-  transition: var(--transition-1);
+.download-resume-btn ion-icon {
+  font-size: 24px; /* Increase the font size for a bigger icon */
+  margin-left: 10px; /* Adds space to the left of the icon */
 }
-
-.download-resume-btn ion-icon { 
-  font-size: 16px; /* Size of the icon */
-}
-
-.download-resume-btn:hover { 
-  background: var(--bg-gradient-yellow-1); 
-}
-
-.download-resume-btn:hover::before { 
-  background: var(--bg-gradient-yellow-2); 
-}
-
 
 
 
