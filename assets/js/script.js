@@ -114,13 +114,48 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
+// document.addEventListener('DOMContentLoaded', (event) => {
+//   document.querySelectorAll('.details-toggle').forEach(button => {
+//     const details = button.nextElementSibling;
+    
+//     // Set the initial state
+//     details.style.display = 'none'; // Hide details initially
+//     button.textContent = 'More'; // Set button text to 'More'
+
+//     // Event listener for clicks
+//     button.addEventListener('click', () => {
+//       // Toggle display of details
+//       if (details.style.display === 'none') {
+//         details.style.display = 'block';
+//         button.textContent = 'Less';
+//       } else {
+//         details.style.display = 'none';
+//         button.textContent = 'More';
+//       }
+//     });
+//   });
+// });
+
+// Immediately invoked function to set initial state
+(function initialSetup() {
+  const detailSections = document.querySelectorAll('.timeline-details');
+  detailSections.forEach(section => {
+    section.style.display = 'none'; // Ensures all details are hidden on load
+  });
+})();
+
+// Event listener for the More/Less toggle
 document.querySelectorAll('.details-toggle').forEach(button => {
   button.addEventListener('click', () => {
     const details = button.nextElementSibling;
-    details.style.display = details.style.display === 'block' ? 'none' : 'block';
-    button.textContent = details.style.display === 'block' ? 'Less' : 'More';
+    const isDisplayed = details.style.display === 'block';
+    details.style.display = isDisplayed ? 'none' : 'block';
+    button.textContent = isDisplayed ? 'More' : 'Less';
   });
 });
+
+
+
 
 
 
