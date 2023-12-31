@@ -2035,6 +2035,61 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-right: 4px;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
+  padding-top: 10px; /* Adds some space at the top */
+}
+
+.h2.article-title {
+  margin: 0; /* Reset margin */
+  margin-right: 20px; /* Adds space to the right of the title */
+}
+
+.download-resume-btn {
+  position: relative;
+  width: auto; /* Adjusted to fit content */
+  background: var(--border-gradient-onyx);
+  color: var(--orange-yellow-crayola);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 14px;
+  font-size: var(--fs-6);
+  text-transform: capitalize;
+  box-shadow: var(--shadow-3);
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.download-resume-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+  transition: var(--transition-1);
+}
+
+.download-resume-btn ion-icon { 
+  font-size: 16px; /* Size of the icon */
+}
+
+.download-resume-btn:hover { 
+  background: var(--bg-gradient-yellow-1); 
+}
+
+.download-resume-btn:hover::before { 
+  background: var(--bg-gradient-yellow-2); 
+}
+
+
+
+
 
   /* Skills Section - Mobile Responsiveness */
 @media (max-width: 480px) {
