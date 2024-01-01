@@ -2044,6 +2044,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-left: 10px; /* Adds space to the left of the icon */
   }
 
+  .email-icon {
+    color: var(--orange-yellow-crayola) I !important;
+  }
+
 
   @media (max-width: 768px) {
     .header-content {
