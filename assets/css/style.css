@@ -2013,11 +2013,6 @@ textarea.form-input::-webkit-resizer { display: none; }
     float: right;
     margin-left: 10px; /* Adjust as needed */
   }
-
-  
-  
-
-    
   
 
   /* Header Content Style */
@@ -2050,7 +2045,35 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
 
-
+  @media (max-width: 768px) {
+    .header-content {
+      display: flex;
+      justify-content: space-between; /* This will push the title and button to the edges */
+      align-items: center;
+      flex-wrap: wrap; /* This allows items to wrap onto the next line if there's not enough space */
+    }
+  
+    .h2.article-title,
+    .download-resume-btn {
+      flex-basis: auto; /* This means they will only take as much space as needed */
+      flex-grow: 0; /* Do not allow them to grow */
+      flex-shrink: 0; /* Do not allow them to shrink */
+      margin: 0 10px; /* This adds a little space on the left and right */
+    }
+  
+    .download-resume-btn {
+      order: 1; /* This will ensure the button is to the right */
+      padding: 5px 10px; /* Adjust padding as necessary */
+    }
+  
+    .download-resume-btn ion-icon {
+      font-size: 20px; /* Adjust the size of the icon as needed */
+      margin-left: 5px; /* Adjust the space to the left of the icon */
+    }
+  }
+  
+  
+  
 
   /* Mobile Responsiveness */
   @media (max-width: 768px) {
